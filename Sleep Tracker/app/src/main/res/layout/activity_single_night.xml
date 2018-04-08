@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#52B19D"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.github.mikephil.charting.charts.CombinedChart
+                android:id="@+id/chart"
+                android:layout_width="match_parent"
+                android:layout_height="500dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.github.mikephil.charting.charts.PieChart
+                    android:id="@+id/sleepstages"
+                    android:layout_weight="0.5"
+                    android:layout_width="0dp"
+                    android:layout_height="200dp" />
+                <com.github.mikephil.charting.charts.PieChart
+                    android:id="@+id/lightquality"
+                    android:layout_weight="0.5"
+                    android:layout_width="0dp"
+                    android:layout_height="200dp" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+
+                <com.github.mikephil.charting.charts.HorizontalBarChart
+                    android:id="@+id/sleepevents"
+                    android:layout_weight="0.5"
+                    android:layout_width="0dp"
+                    android:layout_height="200dp" />
+
+                <TextView
+                    android:id="@+id/qualityindicator"
+                    android:layout_width="0dp"
+                    android:layout_height="200dp"
+                    android:text=""
+                    android:textSize="80sp"
+                    android:textColor="@android:color/white"
+                    android:layout_weight="0.5"
+                    android:gravity="center"  />
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

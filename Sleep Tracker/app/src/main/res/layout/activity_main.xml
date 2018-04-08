@@ -1,0 +1,72 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="fill_parent"
+        android:layout_height="120dp"
+        android:background="@drawable/swirl_background"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:elevation="5dp">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/app_name"
+            android:textColor="@android:color/white"
+            android:textSize="40sp"
+            android:layout_centerHorizontal="true" />
+        <Button
+            android:id="@+id/start_test"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Test"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+        <TextView
+            android:id="@+id/temp_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" ℃"
+            android:textColor="@android:color/white"
+            android:textSize="24sp"
+            android:layout_marginLeft="10px"
+            android:layout_marginBottom="10px"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"/>
+
+
+    </RelativeLayout>
+    <ListView
+        android:layout_alignLeft="@+id/header"
+        android:layout_alignStart="@+id/header"
+        android:layout_below="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/nights_list"
+        android:layout_alignParentStart="false"></ListView>
+
+
+    <android.support.design.widget.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/toggleRecording"
+        android:layout_marginTop="90dp"
+        android:src="@drawable/ic_action_play"
+        app:elevation="15dp"
+        app:backgroundTint="#EDC55B"
+        app:borderWidth="0dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true"/>
+</RelativeLayout>
